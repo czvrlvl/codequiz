@@ -1,21 +1,55 @@
 "use client";
 
-import { useScrollTop } from "@/hooks/use-scroll-top";
-import { cn } from "@/lib/utils";
+import { useState } from "react";
+import Image from "next/image";
+
+import Link from "next/link";
 
 export const Navbar = () => {
-  const scrolled = useScrollTop();
+    const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div
-      className={cn(
-        "z-50 bg-background fixed top-0 flex items-center w-full p-6",
-        scrolled && "border-b shadow-sm"
-      )}
-    >
-      <div className="md:ml-auto md:justify-end justify-between w-full flex items-center gap-x-2">
-        Login
-      </div>
-    </div>
-  );
+    return (
+        <>
+            {/* NAVBAR TOP */}
+            <div className="z-50 bg-white fixed top-0 flex items-center w-full p-6 border-b border-black ">
+                {/* Logo po lewej */}
+                <div className="text-xl font-semibold">Notify.</div>
+
+                {/* Hamburger po prawej */}
+                <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
+                    className="ml-auto relative w-6 h-6"
+                >
+                    <Image
+                        src="/icons.svg"
+                        fill
+                        alt="menu"
+                        className="object-contain"
+                    />
+                </button>
+            </div>
+
+            {/* MENU PO OTWARCIU */}
+            {isOpen && (
+                <div className="z-40 fixed top-[72px] right-0 w-full bg-white border-t shadow-md flex flex-col space-y-4 p-6 text-right">
+                    <Link href="#features" onClick={() => setIsOpen(false)}>
+                        Features
+                    </Link>
+                    <Link href="#about" onClick={() => setIsOpen(false)}>
+                        About
+                    </Link>
+                    <Link href="#faq" onClick={() => setIsOpen(false)}>
+                        FAQ
+                    </Link>
+                    <Link href="/login" onClick={() => setIsOpen(false)}>
+                        Login
+                    </Link>
+                    <Link href="/signup" onClick={() => setIsOpen(false)}>
+                        Signup
+                    </Link>
+                </div>
+            )}
+        </>
+    );
 };

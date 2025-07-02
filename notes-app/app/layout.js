@@ -1,29 +1,20 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const redHat = Red_Hat_Display({
+    subsets: ["latin"],
+    weight: ["400", "700"], // wagi, które chcesz załadować
+    display: "swap", // zalecane, by uniknąć niewidocznego tekstu
 });
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata = {
-  title: "Notify.",
-  description: "Empty your mind, it need a little break",
+    title: "Notify.",
+    description: "Empty your mind, it need a little break",
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
-  );
+    return (
+        <html lang="en" className={redHat.className}>
+            <body>{children}</body>
+        </html>
+    );
 }
