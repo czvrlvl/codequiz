@@ -4,12 +4,12 @@ import { Toaster } from "sonner";
 
 const redHat = Red_Hat_Display({
   subsets: ["latin"],
-  weight: ["400", "700"], // wagi, które chcesz załadować
-  display: "swap", // zalecane, by uniknąć niewidocznego tekstu
+  weight: ["400", "700"],
+  display: "swap",
 });
 export const metadata = {
-  title: "Notify.",
-  description: "Empty your mind, it need a little break",
+  title: "CodeQuiz.",
+  description: "Learn full-stack technologies",
 };
 
 export default function RootLayout({ children }) {

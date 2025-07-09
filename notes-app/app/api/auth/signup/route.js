@@ -55,7 +55,7 @@ export async function POST(request) {
     await newUser.save();
     return NextResponse.json({ message: "User created" }, { status: 201 });
   } catch (error) {
-    console.error("Signup error:", error); // ← dodaj to
+    console.error("Signup error:", error);
     return NextResponse.json(
       { message: "There was an error" },
       { status: 500 }

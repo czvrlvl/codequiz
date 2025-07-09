@@ -3,14 +3,14 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 
 const font = Inter({
-    subsets: ["latin"],
-    weight: ["400", "600"],
+  subsets: ["latin"],
+  weight: ["400", "600"],
 });
 
 export const Logo = () => {
-    return (
-        <div className="hidden md:flex itmes-center gap-x-2">
-            <p className={cn("font-semibold", font.className)}>Notify.</p>
-        </div>
-    );
+  return (
+    <div className="hidden md:flex itmes-center gap-x-2">
+      <p className={cn("font-semibold", font.className)}>CodeQuiz.</p>
+    </div>
+  );
 };

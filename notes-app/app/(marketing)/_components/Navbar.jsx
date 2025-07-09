@@ -10,12 +10,9 @@ export const Navbar = () => {
 
   return (
     <>
-      {/* NAVBAR TOP */}
       <div className="z-50 bg-white fixed top-0 flex items-center w-full p-6 border-b border-black ">
-        {/* Logo po lewej */}
-        <div className="text-xl font-semibold">Notify.</div>
+        <div className="text-xl font-semibold">CodeQuiz.</div>
 
-        {/* Hamburger po prawej */}
         <button
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle menu"
@@ -25,12 +22,8 @@ export const Navbar = () => {
         </button>
       </div>
 
-      {/* MENU PO OTWARCIU */}
       {isOpen && (
         <div className="z-40 fixed top-[72px] right-0 w-full bg-white border-t shadow-md flex flex-col space-y-4 p-6 text-right">
-          <Link href="/features" onClick={() => setIsOpen(false)}>
-            Features
-          </Link>
           <Link href="/about" onClick={() => setIsOpen(false)}>
             About
           </Link>

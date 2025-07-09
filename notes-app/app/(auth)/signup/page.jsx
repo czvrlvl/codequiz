@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@radix-ui/react-separator";
 import { Input } from "@/components/ui/input";
-import { FaGithub } from "react-icons/fa";
+
 import Link from "next/link"; // jeśli Next.js
-import { FcGoogle } from "react-icons/fc";
+
 import { useState } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
@@ -112,26 +112,7 @@ const SignUp = () => {
           </form>
 
           <Separator />
-          <div className="flex my-2 justify-evenly mx-auto items-center">
-            <Button
-              disabled={false}
-              onClick={() => {}}
-              variant="outline"
-              size="lg"
-              className="bg-slate-300 hover:bg-slate-400 hover:scale-110"
-            >
-              <FcGoogle className="size-8 left-2.5 top-2.5" />
-            </Button>
-            <Button
-              disabled={false}
-              onClick={() => {}}
-              variant="outline"
-              size="lg"
-              className="bg-slate-300 hover:bg-slate-400 hover:scale-110"
-            >
-              <FaGithub className="size-8 left-2.5 top-2.5" />
-            </Button>
-          </div>
+
           <p className="text-center text-sm mt-2 text-muted-foreground">
             Already have an account?
             <Link
@@ -142,6 +123,11 @@ const SignUp = () => {
             </Link>
           </p>
         </CardContent>
+        <div className="pt-4 text-center">
+          <Button variant="ghost" onClick={() => router.push("/")}>
+            ← Back to home page
+          </Button>
+        </div>
       </Card>
     </div>
   );

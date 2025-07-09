@@ -10,28 +10,30 @@ import {
 export default function FAQ() {
   const faqData = [
     {
-      question: "Czym jest Notify?",
+      question: "Jak mogę zacząć korzystać z CodeQuiz?",
       answer:
-        "Notify to intuicyjna aplikacja webowa do tworzenia i zarządzania notatkami.",
+        "To proste - wystarczy, że założysz konto oraz wybierzesz technologię, którą chcesz ćwiczyć i rozpoczniesz quiz.",
     },
     {
-      question: "Czy moje notatki są bezpieczne?",
+      question: "Jakie technologie są dostępne?",
       answer:
-        "Tak, korzystamy z JWT i zabezpieczonej bazy danych. Twoje notatki są widoczne tylko dla Ciebie.",
+        "Oferujemy quizy z: React, Next.js, TypeScript, JavaScript, HTML i CSS. Regularnie dodajemy nowe tematy.",
     },
     {
-      question: "Czy mogę edytować i usuwać notatki?",
-      answer: "Tak, masz pełną kontrolę nad wszystkimi swoimi notatkami.",
+      question: "Co znajdę w lekcjach?",
+      answer:
+        "Lekcje to krótkie, praktyczne podsumowania najważniejszych aspektów każdej technologii, które pomogą Ci szybko odświeżyć wiedzę i przygotować się do quizu.",
     },
+
     {
-      question: "Czy Notify jest darmowe?",
-      answer: "Tak, aplikacja Notify jest w 100% darmowa do użytku osobistego.",
+      question: "Czy quizy są dostosowane do poziomu zaawansowania?",
+      answer:
+        "Tak, oznaczyliśmy pytania jako podstawowe/średniozaawansowane/zaawansowane.",
     },
   ];
 
   return (
     <section className="max-w-6xl mx-auto px-6 md:px-12 py-16 flex flex-col md:flex-row gap-12">
-      {/* FAQ Accordion */}
       <div className="flex-1">
         <h2 className="text-4xl font-extrabold mb-8 leading-tight">
           Najczęściej zadawane pytania
